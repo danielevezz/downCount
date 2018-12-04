@@ -6,82 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="flipclock.css" />
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700|Montserrat" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet" />
-
-  <style type="text/css">
-    body {
-      background: #fff;
-      color: #1a1a1a;
-      font-weight: 700;
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 50px;
-      margin-top: 20px;
-    }
-
-    .image {
-      display: block;
-      margin: auto;
-      width: 50%;
-    }
-
-    ul.countdown {
-      list-style: none;
-      margin: 75px 0;
-      padding: 0;
-      display: block;
-      text-align: center;
-    }
-
-    ul.countdown li {
-      display: inline-block;
-    }
-
-    ul.countdown li span {
-      font-size: 80px;
-      font-weight: 300;
-      line-height: 80px;
-    }
-
-    ul.countdown li.seperator {
-      font-size: 80px;
-      line-height: 70px;
-      vertical-align: top;
-    }
-
-    ul.countdown li p {
-      color: #a7abb1;
-      font-size: 17px;
-    }
-
-    .contatti {
-      font-family: "Montserrat", sans-serif;
-      text-align: center;
-      color: #365897;
-      font-size: 24px;
-      margin-top: 30px;
-    }
-
-    .social {
-      margin-top: 20px;
-      font-size: 30px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #365897;
-    }
-
-    a:hover {
-      color: #365897;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700|Montserrat|Lato" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link href="main.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
-    <ul class="countdown">
+    <ul class="countdown list-inline">
       <li>
         <span class="days">00</span>
         <p class="days_ref">days</p>
@@ -104,7 +37,9 @@
     </ul>
     <img class="image" src="undraw_Outer_space_drqu.svg" alt="">
     <div class="contatti">
-      <p>stb1019_publicity@googlegroups.com</p>
+      <a href="mailto:stb1019_publicity@googlegroups.com">
+        <p class="mail">stb1019_publicity@googlegroups.com</p>
+      </a>
       <div class="social">
 
         <a href="https://www.facebook.com/stb1019">
@@ -133,10 +68,15 @@
     $(".countdown").downCount(
       {
         date: "12/29/2018 00:00:00",
+        //date: "12/04/2018 20:19:00",
         offset: +1
       },
       function () {
-        alert("WOOT WOOT, done!");
+        $("body").addClass("done");
+        $(".image").addClass("launch");
+        $(".mail").addClass("white");
+        $(".social>a").addClass("white");
+
       }
     );
   </script>

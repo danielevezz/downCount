@@ -1,0 +1,140 @@
+body {
+    background: #fff;
+    color: #1a1a1a;
+    font-family: "IBM Plex Mono", monospace;
+    margin-top: 20px;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+.image {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+ul.countdown {
+    list-style: none;
+    margin: 75px 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+    font-size: 60px;
+    font-kerning: normal;
+}
+
+ul.countdown li {
+    display: inline-block;
+}
+
+ul.countdown li span {
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 80px;
+}
+
+ul.countdown li.seperator {
+    font-size: 80px;
+    line-height: 70px;
+    vertical-align: top;
+}
+
+ul.countdown li p {
+    color: #a7abb1;
+    font-size: 17px;
+}
+
+.contatti {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    color: #365897;
+    font-size: 24px;
+    margin-top: 70px;
+    font-weight: 700;
+}
+
+.social>a {
+    margin-top: 20px;
+    font-size: 30px;
+    -webkit-transition: color 1s linear;
+    -moz-transition: color 1s linear;
+    -o-transition: color 1s linear;
+    transition: color 1s linear;
+}
+
+.mail {
+    -webkit-transition: color 1s linear;
+    -moz-transition: color 1s linear;
+    -o-transition: color 1s linear;
+    transition: color 1s linear;
+}
+
+a {
+    text-decoration: none;
+    color: #365897;
+}
+
+a:hover {
+    color: #365897;
+    text-decoration: none;
+}
+
+.done {
+    background-color: #365897;
+    color: white;
+}
+
+.white {
+    color: white;
+}
+
+.launch {
+    transform: translateY(-100vh);
+    -webkit-transition: all 5s cubic-bezier(.61,0,.99,.64);
+    -moz-transition: all 5s cubic-bezier(.61,0,.99,.64);
+    -o-transition: all 5s cubic-bezier(.61,0,.99,.64);
+    transition: all 5s cubic-bezier(.61,0,.99,.64); 
+    opacity: 0;
+}
+
+@media (max-width: 991.98px) { 
+    ul.countdown {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    ul.countdown li.seperator {
+        display: none;
+    }
+    ul.countdown li span {
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    ul.countdown li span {
+        font-size: 50px;
+    }
+    .mail {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 460px) { 
+    .mail {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 360px) { 
+    ul.countdown li span {
+        font-size: 40px;
+    }
+
+    .mail {
+        font-size: 12px;
+    }
+}
