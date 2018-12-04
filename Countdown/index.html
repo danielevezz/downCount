@@ -1,100 +1,107 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>...</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="flipclock.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Montserrat"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
-      rel="stylesheet"
-    />
 
-    <style type="text/css">
-      body {
-        background: #111111;
-        color: white;
-        font: normal 12px;
-        font-family: "IBM Plex Mono", monospace;
-        margin-top: 20px;
-      }
-      ul.countdown {
-        list-style: none;
-        margin: 75px 0;
-        padding: 0;
-        display: block;
-        text-align: center;
-      }
-      ul.countdown li {
-        display: inline-block;
-      }
-      ul.countdown li span {
-        font-size: 80px;
-        font-weight: 300;
-        line-height: 80px;
-      }
-      ul.countdown li.seperator {
-        font-size: 80px;
-        line-height: 70px;
-        vertical-align: top;
-      }
-      ul.countdown li p {
-        color: #a7abb1;
-        font-size: 14px;
-      }
-      .title {
-        font-family: "Montserrat", sans-serif;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="title">Online in...</h1>
-      <ul class="countdown">
-        <li>
-          <span class="days">00</span>
-          <p class="days_ref">days</p>
-        </li>
-        <li class="seperator">:</li>
-        <li>
-          <span class="hours">00</span>
-          <p class="hours_ref">hours</p>
-        </li>
-        <li class="seperator">:</li>
-        <li>
-          <span class="minutes">00</span>
-          <p class="minutes_ref">minutes</p>
-        </li>
-        <li class="seperator">:</li>
-        <li>
-          <span class="seconds">00</span>
-          <p class="seconds_ref">seconds</p>
-        </li>
-      </ul>
-    </div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="flipclock.css" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Montserrat" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet" />
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script src="clock.js"></script>
-    <script class="source" type="text/javascript">
-      $(".countdown").downCount(
-        {
-          date: "12/29/2018 00:00:00",
-          offset: +1
-        },
-        function() {
-          alert("WOOT WOOT, done!");
-        }
-      );
-    </script>
-  </body>
+  <style type="text/css">
+    body {
+      background: #fff;
+      color: #1a1a1a;
+      font: normal 12px;
+      font-family: "IBM Plex Mono", monospace;
+      margin-top: 20px;
+    }
+
+    .image {
+      display: block;
+      margin: auto;
+      width: 50%;
+    }
+
+    ul.countdown {
+      list-style: none;
+      margin: 75px 0;
+      padding: 0;
+      display: block;
+      text-align: center;
+    }
+
+    ul.countdown li {
+      display: inline-block;
+    }
+
+    ul.countdown li span {
+      font-size: 80px;
+      font-weight: 300;
+      line-height: 80px;
+    }
+
+    ul.countdown li.seperator {
+      font-size: 80px;
+      line-height: 70px;
+      vertical-align: top;
+    }
+
+    ul.countdown li p {
+      color: #a7abb1;
+      font-size: 17px;
+    }
+
+    .title {
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title"></h1>
+    <ul class="countdown">
+      <li>
+        <span class="days">00</span>
+        <p class="days_ref">days</p>
+      </li>
+      <li class="seperator">:</li>
+      <li>
+        <span class="hours">00</span>
+        <p class="hours_ref">hours</p>
+      </li>
+      <li class="seperator">:</li>
+      <li>
+        <span class="minutes">00</span>
+        <p class="minutes_ref">minutes</p>
+      </li>
+      <li class="seperator">:</li>
+      <li>
+        <span class="seconds">00</span>
+        <p class="seconds_ref">seconds</p>
+      </li>
+    </ul>
+    <img class="image" src="undraw_Outer_space_drqu.svg" alt="">
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="clock.js"></script>
+  <script class="source" type="text/javascript">
+    $(".countdown").downCount(
+      {
+        date: "12/29/2018 00:00:00",
+        offset: +1
+      },
+      function () {
+        alert("WOOT WOOT, done!");
+      }
+    );
+  </script>
+</body>
+
 </html>
