@@ -7,15 +7,16 @@
   <title>...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="flipclock.css" />
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Montserrat" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700|Montserrat" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet" />
 
   <style type="text/css">
     body {
       background: #fff;
       color: #1a1a1a;
-      font: normal 12px;
+      font-weight: 700;
       font-family: "IBM Plex Mono", monospace;
+      font-size: 50px;
       margin-top: 20px;
     }
 
@@ -54,16 +55,32 @@
       font-size: 17px;
     }
 
-    .title {
+    .contatti {
       font-family: "Montserrat", sans-serif;
       text-align: center;
+      color: #365897;
+      font-size: 24px;
+      margin-top: 30px;
+    }
+
+    .social {
+      margin-top: 20px;
+      font-size: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #365897;
+    }
+
+    a:hover {
+      color: #365897;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1 class="title"></h1>
     <ul class="countdown">
       <li>
         <span class="days">00</span>
@@ -86,6 +103,27 @@
       </li>
     </ul>
     <img class="image" src="undraw_Outer_space_drqu.svg" alt="">
+    <div class="contatti">
+      <p>stb1019_publicity@googlegroups.com</p>
+      <div class="social">
+
+        <a href="https://www.facebook.com/stb1019">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+
+        <a href="https://twitter.com/stb1019">
+          <i class="fab fa-twitter"></i>
+        </a>
+
+        <a href="https://github.com/STB1019">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://www.instagram.com/stb01019/">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -102,6 +140,8 @@
       }
     );
   </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
